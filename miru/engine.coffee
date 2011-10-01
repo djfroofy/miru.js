@@ -448,7 +448,7 @@ class CameraUtils
 
     @_fly_defaults: {
         fov: 25
-        aspect: window.screenWidth/ window.screenHeight
+        aspect: window.innerWidth / window.innerHeight
         movementSpeed: 5000
         rollSpeed: Math.PI / 24
         autoForward: false
