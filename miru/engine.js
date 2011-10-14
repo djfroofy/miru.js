@@ -92,6 +92,14 @@
         setInterval(this.debugF, 5000);
       }
     }
+    World.prototype.setPrimaryCamera = function(camera) {
+      this.cameras[0] = camera;
+      return this.camera = camera;
+    };
+    World.prototype.setPrimaryScene = function(scene) {
+      this.scenes[0] = scene;
+      return this.scene = scene;
+    };
     World._defaultScene = function() {
       return new THREE.Scene();
     };
@@ -502,7 +510,7 @@
     };
     CameraUtils._fly_defaults = {
       fov: 25,
-      aspect: window.screenWidth / window.screenHeight,
+      aspect: window.innerWidth / window.innerHeight,
       movementSpeed: 5000,
       rollSpeed: Math.PI / 24,
       autoForward: false,

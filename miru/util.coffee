@@ -58,3 +58,16 @@ class Cycle
 
 Util.Cycle = Cycle
 
+# Aliases
+
+Util.V3 = (x, y, z) ->
+    new THREE.Vector3(x, y, z)
+
+
+Util.Q = (x, y, z) ->
+    new THREE.Quaternion(x, y, z)
+
+Util.randint = (min=0, max=100) ->
+    Math.floot(Math.random() * (max - min + 1)) + min
+
+

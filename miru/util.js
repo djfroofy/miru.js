@@ -70,4 +70,19 @@
     return Cycle;
   })();
   Util.Cycle = Cycle;
+  Util.V3 = function(x, y, z) {
+    return new THREE.Vector3(x, y, z);
+  };
+  Util.Q = function(x, y, z) {
+    return new THREE.Quaternion(x, y, z);
+  };
+  Util.randint = function(min, max) {
+    if (min == null) {
+      min = 0;
+    }
+    if (max == null) {
+      max = 100;
+    }
+    return Math.floot(Math.random() * (max - min + 1)) + min;
+  };
 }).call(this);
